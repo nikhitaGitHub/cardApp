@@ -14,8 +14,6 @@ const SignUp = (props) => {
     const [isLoading, setIsLoading] = useState(false)
     const emailRef = useRef();
     const passwordRef = useRef();
-    // const fname = useRef();
-    // const lname = useRef();
     const authCtx = useContext(AuthContext);
     const [msg, setMsg] = useState("");
     const navigate = useNavigate();
@@ -42,8 +40,6 @@ const SignUp = (props) => {
         fetch(url, {
                 method: 'POST',
                 body: JSON.stringify({
-                    // firstName: fname.current.value,
-                    // lastName: lname.current.value,
                     email: enteredEmail,
                     password: enteredPassword,
                     returnSecureToken: true
@@ -83,36 +79,6 @@ const SignUp = (props) => {
             <React.Fragment>
             <Container align="center" maxWidth="sm">
                 <Box component="form" onSubmit={submitHandler} noValidate sx={{ width:"65%" , mt: 20, py: 5 }}>
-                {/* <Grid container spacing={2} >
-                    <Grid item xs={12} sm={6}>
-                        <TextField
-                            inputRef = {fname}
-                            placeholder="Enter First Name"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="fname"
-                            name="fname"
-                            label="First Name"
-                            autoFocus
-                            variant = "outlined"
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <TextField
-                            inputRef = {lname}
-                            placeholder="Enter Last Name"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="lname"
-                            name="lname"
-                            label="Last Name"
-                            autoFocus
-                            variant = "outlined"
-                        />
-                    </Grid>
-                </Grid> */}
                 <TextField
                     inputRef = {emailRef}
                     placeholder="dummy@email.com"

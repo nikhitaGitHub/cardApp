@@ -105,8 +105,6 @@ return (
                   <TextField
                     inputRef = {dateRef}
                     margin="normal"
-                    // label="Project End Date"
-                    // placeholder="date time"
                     required
                     fullWidth
                     id="endDate"
@@ -116,23 +114,6 @@ return (
                     type="datetime-local"
                     variant="standard"
                 /> 
-                {/* <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <DateTimePicker
-                        disableToolbar
-                        variant='dialog'
-                        margin="normal"
-                        id="date-time-picker"
-                        value={value}
-                        onChange={(newValue) => {
-                            setValue(newValue)
-                        }}
-                        disablePast
-                        required
-                        fullWidth
-                        label="Project End Date"
-                        inputVariant="outlined"
-                   />
-                </MuiPickersUtilsProvider> */}
                 <Button type="submit" fullWidth  size="large" sx={{my:3}} variant="contained">Submit</Button>
             </Box>
         </Container>
